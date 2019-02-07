@@ -4,8 +4,8 @@ AirQualitySensor::AirQualitySensor(PinName out1, PinName out2)
   : _out1(out1), _out2(out2) 
 {
   reset();
-  _out1.rise(mbed::callback(this, &AirQualitySensor::countPM10));
-  _out2.rise(mbed::callback(this, &AirQualitySensor::countPM2_5));
+  _out1.rise(mbed::callback(this, &AirQualitySensor::countPM2_5));
+  _out2.rise(mbed::callback(this, &AirQualitySensor::countPM10));
 }
 
 void AirQualitySensor::reset(){
